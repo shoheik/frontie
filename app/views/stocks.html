@@ -1,0 +1,19 @@
+<br><br><br>
+<div class="container">
+  <div class="row-fluid">
+    <div class="span1"></div>
+    <div class="span10"> 
+      <br>
+        <div id="stock_area">  
+          <ul class="stock"  ng-repeat="stock in stocks">
+            <li>
+              <div ng-click="selectStock($index)">
+                <img width="150px" height="150px" src="{{ stock.img }}" class="img-polaroid">
+              </div>  
+            </li>
+        </ul>
+        </div>
+    </div>
+    <div class="span1"></div>
+  </div>
+</div>

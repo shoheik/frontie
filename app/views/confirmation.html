@@ -1,0 +1,57 @@
+<br><br>
+<div class="container">
+  <div class="row-fluid">
+    <div class="span1"></div>
+    <div class="span10">
+      <hr>
+      <br>
+      <div id="confirmation" class="well">
+        <h3>購入銘柄 : {{ stock.name }} </h3>
+        <table class="table">
+          <tr>
+            <td><strong>株購入金額</strong></td>
+            <td> {{ price }} </td>
+          </tr>
+          <tr>
+            <td><strong>アカウント情報</strong></td>
+            <td>
+              <table class="table-bordered">
+                <tr>
+                  <td><strong>名前</strong></td>
+                  <td> 亀田祥平 </td>
+                </tr>
+                <tr>
+                  <td><strong>email</strong></td>
+                  <td>shohei.kameda@gmail.com</td>
+                </tr>
+                <tr>
+                  <td><strong>生年月日</strong></td>
+                  <td>1979年12月26日</td>
+                </tr>
+                <tr>
+                  <td><strong>電話番号</strong></td>
+                  <td>090-6656-xxxx</td>
+                </tr>
+                <tr>
+                  <td><strong>住所</strong></td>
+                  <td>神奈川県横浜市港北区日吉本町xx-yy-zzアパート201</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>支払い方法</strong></td>
+            <td> Paypal </td>
+          </tr>
+          <tr>
+            <td><strong>売却時の注意事項</strong></td>
+            <td></td>
+          </tr>
+        </table>
+        <button class="btn btn-large btn-success" type="button" ng-click="confirmOrder()">確定する</button>
+      </div>
+    </div>
+    <div class="span1"></div>
+  </div>
+</div>
+

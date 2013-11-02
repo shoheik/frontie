@@ -1,0 +1,59 @@
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.hero-unit {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+    background-image: url(../images/heart2.jpg);
+    height: 300px;
+}
+
+.hero-unit h1 {
+    font-size: 72px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+#stock_area {
+    margin-top: 50px;
+}
+
+.price_font {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.stock ul, .price_list ul{
+    width:860px;
+}
+
+.stock li {
+    float:left;
+    margin-right:20px;
+    margin-bottom:20px;
+    width:150px;
+    list-style: none;
+}
+
+.price_list li{
+    float:left;
+    margin-right:15px;
+    margin-bottom:15px;
+    width:170px;
+    list-style: none;
+}
+
+.price_list input {
+    margin-bottom: 16px;
+}
+
+div#confirmation {
+    background-color: white;
+}

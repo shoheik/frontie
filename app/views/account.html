@@ -1,0 +1,48 @@
+<br><br>
+<div class="container">
+  <div class="row-fluid">
+    <div class="span1"></div>
+    <div class="span10">
+      <br>
+      <h3>アカウント情報</h3>
+      <br>
+      <h4>購入済みの株</h4>
+      <div ng-repeat="stock in stockList">
+        <div class="well">
+        <div class="media">
+          <img class="pull-left" src="{{ stock.img }}" width="100" class="img-polaroid">
+          <div class="media-body" style="padding-left:30px">
+            <h3 class="media-heading">{{stock.name}}</h3>
+            <table class="table">
+              <th>所有株式数</th><th>株価</th><th>現在価値</th>
+              <tr>
+                <td>{{stock.volume}}</td>
+                <td>{{stock.sharePrice}}</td>
+                <td>{{stock.shareValue}}</td>
+              </t>
+            </table>
+          </div>
+        </div>
+      </div>
+      </div>
+      <hr>
+      <h4>履歴</h4>
+      <table class="table">
+        <th>日時</th><th>銘柄</th><th>注文の種類</th><th>購入株式数</th><th>株価</th>
+        <tr ng-repeat="record in history | orderBy:'date':true">
+          <td>{{ record.date}}</td>
+          <td>{{ record.name }}</td>
+          <td>{{ record.orderType }}</td>
+          <td>{{ record.volume }}</td>
+          <td>{{ record.sharePrice }}</td>
+        </tr>
+      </table>
+      <br>
+      <a href="/#/buy/stock" class="btn btn-large btn-info">続けて購入する</a>
+      <br>
+      <br>
+    </div>
+    <div class="span1"></div>
+  </div>
+</div>
+

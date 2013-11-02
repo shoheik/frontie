@@ -1,0 +1,61 @@
+<br><br>
+<div class="container">
+  <div class="row-fluid">
+    <div class="span1"></div>
+    <div class="span10">
+      <br>
+      <center>
+        <strong> {{ stock.name }}    |    {{ stock.exch }} : {{ stock.id }} : {{ cp }} |  </strong><img src="images/tweet.png" height="35" width="100"> <img src="images/iine.jpg" height="35" width="100">
+        <br>
+        <br>
+        <h4>{{ stock.name }} 株を購入する。５００円から手数料無料で購入可能です。</h4>
+        <br>
+        <img width="150px" height="150px" src="{{ stock.img }}" class="img-polaroid">
+
+        <br>
+        <br>
+
+        <h4> 購入額を選択してください。</h4>
+
+        <br>
+        <ul class="price_list">
+          <li class="price_list">
+            <div class="well">
+              <span class="price_font"> 500円 </span><br>
+              <br>
+              <div class="btn btn-large btn-info" type="button" ng-click="selectPrice(500)"> 選択 </div>
+            </div>
+          </li>
+          <li class="price_list">
+            <div class="well">
+              <span class="price_font"> 1000円 </span>
+              <br><br>
+              <div class="btn btn-large btn-info" type="button" ng-click="selectPrice(1000)"> 選択 </div>
+            </div>
+          </li>
+          <li class="price_list">
+            <div class="well">
+              <span class="price_font"> 5000円 </span>
+              <br><br>
+              <div class="btn btn-large btn-info" type="button" ng-click="selectPrice(5000)"> 選択 </div>
+            </div>
+          </li>
+          <li class="price_list">
+            <div class="well">
+              <input type="text" class="span9" style="font-size: 20px; font-weight: bold" ng-model="cust_price"> 円</span></input>
+              <br>
+              <div class="btn btn-large btn-info" type="button" ng-click="selectCustPrice()">金額指定</div>
+            </div>
+          </li>
+        </ul>
+      </center>
+      <br><br><br>
+      <br><br><br>
+      <br><br>
+      <hr>
+
+        {{ cust_price }}
+    </div>
+    <div class="span1"></div>
+  </div>
+</div>

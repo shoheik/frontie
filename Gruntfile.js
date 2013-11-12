@@ -5,7 +5,7 @@
 // for performance reasons we're only matching one level down:
 // 'test/spec/{,*/}*.js'
 // use this if you want to recursively match all subfolders:
-// 'test/spec/**/*.js'
+'test/spec/**/*.js'
 
 module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
@@ -142,7 +142,7 @@ module.exports = function (grunt) {
           src: [
             '<%= yeoman.dist %>/scripts/{,*/}*.js',
             '<%= yeoman.dist %>/styles/{,*/}*.css',
-            '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+            //'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/styles/fonts/*'
           ]
         }
@@ -227,7 +227,8 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'bower_components/**/*',
-            'images/{,*/}*.{gif,webp}',
+            //'images/{,*/}*.{gif,webp}',
+            'images/**/*',
             'styles/fonts/*'
           ]
         }, {
@@ -267,6 +268,11 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'karma.conf.js',
         singleRun: true
+      },
+      auto: {
+        configFile: 'karma.conf.js',
+        singleRun: false,
+        autoWatch: true
       }
     },
     cdnify: {
@@ -319,11 +325,11 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'copy:dist',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
     'concat',
-    'copy:dist',
     'cdnify',
     'ngmin',
     'cssmin',

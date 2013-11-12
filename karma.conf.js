@@ -19,6 +19,7 @@ module.exports = function(config) {
       'app/scripts/*.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
+      //'test/spec/controllers/main.js',
       'test/spec/**/*.js'
     ],
 
